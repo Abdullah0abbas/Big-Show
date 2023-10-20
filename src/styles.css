@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #000000;
+    overflow-x: hidden;
+}
+
+/* Target the scrollbar track */
+::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+  }
+  
+  /* Target the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background: white; /* Color of the thumb */
+  }
+  
+  /* Target the scrollbar track on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: white; /* Color of the thumb on hover */
+  }

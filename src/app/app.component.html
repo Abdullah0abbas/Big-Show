@@ -1,0 +1,35 @@
+<!-- navbar start  -->
+<nav class="navbar navbar-expand-lg navbar-expand-md fixed-top" [ngStyle]="navbg">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink=""><i class='logo bx bxs-movie-play'></i>Big Show</a>
+      <button class="navbar-toggler"
+       type="button" 
+       data-bs-toggle="collapse" 
+       data-bs-target="#navbarNav" 
+       aria-controls="navbarNav" 
+       aria-expanded="false" 
+       aria-label="Toggle navigation">
+       <i class='bx bx-menu'></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/"><i class='bx bxs-home'></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/movies"><i class='bx bx-movie'></i>Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/series"><i class='bx bx-film'></i>Series</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/search"><i class='bx bx-search'></i>Search</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- navbar end -->
+
+<app-music></app-music>
+<router-outlet></router-outlet>

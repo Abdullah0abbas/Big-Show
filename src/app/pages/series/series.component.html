@@ -1,0 +1,123 @@
+<!-- start banner -->
+
+<div class="container-fluid">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-inner">
+            <div class="carousel-item" data-bs-interval="10000" *ngFor="let item of bannerRes;let i=index"
+                [ngClass]="{active:i===1}">
+                <img src="https://image.tmdb.org/t/p/original/{{item.backdrop_path}}" 
+                class="d-block"
+                alt="..."
+                [ngClass]="{active:i===1}">
+                <div class="carousel-caption d-md-block">
+                    <h2 class="mb-4">{{item.original_title}}</h2>
+                    <p class="d-none d-md-block">{{item.overview}}</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<!-- End banner -->
+
+<div class="contain mt-3 p-4">
+
+    <!-- Trending -->
+    <div class="row">
+        <h5 class="text-white">Trending Series</h5>
+        <div class="rowposter mt-3 p-2">
+
+            <ng-container *ngFor="let item of trendingSeries">
+                <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" class="rowimg largeposter" alt="..."
+                    [routerLink]="['/series',item.id]">
+            </ng-container>
+        </div>
+    </div>
+
+    <!-- Action -->
+    <div class="row mt-4">
+        <h5 class="text-white">Action Series</h5>
+        <div class="rowposter mt-3 p-2">
+
+            <ng-container *ngFor="let item of actionSeries">
+                <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" 
+                class="rowimg largeposter" alt="..."
+                [routerLink]="['/series',item.id]">
+            </ng-container>
+        </div>
+    </div>
+
+     <!-- Animation -->
+     <div class="row mt-4">
+        <h5 class="text-white">Animation Series</h5>
+        <div class="rowposter mt-3 p-2">
+
+            <ng-container *ngFor="let item of animationSeries">
+                <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" 
+                class="rowimg largeposter" alt="..."
+                [routerLink]="['/series',item.id]">
+            </ng-container>
+        </div>
+    </div>
+
+     <!-- Comedy -->
+     <div class="row mt-4">
+        <h5 class="text-white">Comedy Series</h5>
+        <div class="rowposter mt-3 p-2">
+
+            <ng-container *ngFor="let item of comedySeries">
+                <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" 
+                class="rowimg largeposter" alt="..."
+                [routerLink]="['/series',item.id]">
+            </ng-container>
+        </div>
+    </div>
+
+     <!-- Documentary -->
+     <div class="row mt-4">
+        <h5 class="text-white">Documentary Series</h5>
+        <div class="rowposter mt-3 p-2">
+
+            <ng-container *ngFor="let item of documentarySeries">
+                <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" 
+                class="rowimg largeposter" alt="..."
+                [routerLink]="['/series',item.id]">
+            </ng-container>
+        </div>
+    </div>
+
+     <!-- War -->
+     <div class="row mt-4">
+        <h5 class="text-white">War Series</h5>
+        <div class="rowposter mt-3 p-2">
+
+            <ng-container *ngFor="let item of warSeries">
+                <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" 
+                class="rowimg largeposter" alt="..."
+                [routerLink]="['/series',item.id]">
+            </ng-container>
+        </div>
+    </div>
+
+     <!-- Drama -->
+     <div class="row mt-4">
+        <h5 class="text-white">Drama Series</h5>
+        <div class="rowposter mt-3 p-2">
+
+            <ng-container *ngFor="let item of dramaSeries">
+                <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" 
+                class="rowimg largeposter" alt="..."
+                [routerLink]="['/series',item.id]">
+            </ng-container>
+        </div>
+    </div>
+
+</div>
